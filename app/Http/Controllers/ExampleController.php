@@ -8,7 +8,11 @@ use Illuminate\Http\Request;
 class ExampleController extends Controller
 {
     public function homepage() {
-        return '<h1>Home Page!!</h1><a href="/about">View About Page</a>';
+
+        // imagine we loaded data from the database
+        $ourName = 'Charles';
+
+        return view('homepage', ['name' => $ourName, 'work' => 'Agent']);
     }
 
     public function aboutPage() {
