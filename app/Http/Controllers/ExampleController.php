@@ -11,11 +11,12 @@ class ExampleController extends Controller
 
         // imagine we loaded data from the database
         $ourName = 'Charles';
+        $animals =['Meowsalot','Barksalot', 'Purrsloud'];
 
-        return view('homepage', ['name' => $ourName, 'work' => 'Agent']);
+        return view('homepage', ['allAnimals' => $animals, 'name' => $ourName, 'work' => 'Agent']);
     }
 
     public function aboutPage() {
-        return '<h1>About Page!!</h1><a href="/">Back to Home</a>';
+        return view('single-post');
     }
 }
